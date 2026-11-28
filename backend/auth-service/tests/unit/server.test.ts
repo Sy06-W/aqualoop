@@ -4,7 +4,7 @@ import { app } from '../../src/server'
 describe('auth-service Cloud Run server', () => {
   beforeEach(() => {
     process.env.DATABASE_URL = 'postgres://test:test@localhost:5432/test'
-    process.env.BETTER_AUTH_SECRET = '0123456789abcdef0123456789abcdef'
+    process.env.BETTER_AUTH_SECRET = 'x'.repeat(32)
     process.env.BETTER_AUTH_URL = 'http://localhost:8080'
     process.env.ALLOWED_ORIGINS = 'https://expo-base.expo.app'
     process.env.NEWLY_ENV = 'production'

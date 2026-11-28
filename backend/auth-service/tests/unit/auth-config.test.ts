@@ -3,7 +3,7 @@ import { createAuth, assertConfig, type AuthEnv } from '../../src/auth'
 
 const baseEnv: AuthEnv = {
   DATABASE_URL: 'postgres://test:test@localhost:5432/test',
-  BETTER_AUTH_SECRET: '0123456789abcdef0123456789abcdef',
+  BETTER_AUTH_SECRET: 'x'.repeat(32),
   BETTER_AUTH_URL: 'https://auth.example.com',
   NEWLY_EMAIL_URL: 'https://mailer.example.com',
   NEWLY_EMAIL_TOKEN: 'secret-token',
